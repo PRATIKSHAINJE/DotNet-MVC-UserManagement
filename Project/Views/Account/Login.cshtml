@@ -1,0 +1,26 @@
+﻿<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+<div class="container mt-5">
+    <div class="card p-4 shadow">
+        <h3>Login</h3>
+
+        <form method="post" action="/Account/Login">
+
+            <div class="mb-3">
+                <label>Email</label>
+                <input type="text" name="username" class="form-control" />
+            </div>
+
+            <div class="mb-3">
+                <label>Password</label>
+                <input type="password" name="password" class="form-control" />
+            </div>
+
+            <button type="submit" class="btn btn-primary">Login</button>
+
+            <!-- ✔ Single Register Button -->
+            <a href="/Account/Register" class="btn btn-secondary ms-2">Register</a>
+
+        </form>
+    </div>
+</div>

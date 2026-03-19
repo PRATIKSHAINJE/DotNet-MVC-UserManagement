@@ -1,0 +1,24 @@
+﻿@model Project.Models.User
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+<div class="container mt-5">
+
+    <h2>User Details</h2>
+
+    @if (Model.Language == "EN")
+    {
+        <p><b>Name:</b> @Model.Name</p>
+        <p><b>Username:</b> @Model.Username</p>
+        <p><b>Language:</b> @Model.Language</p>
+        <p><b>Mobile Number:</b> @Model.Mobile</p>
+    }
+    else
+    {
+        <p><b>Name:</b> @Model.Name</p>
+        <p><b>Uesrname:</b> @Model.Username</p>
+        <p><b>Sprache:</b> @Model.Language</p>
+        <p><b>Mobile :</b> @Model.Mobile</p>
+    }
+
+</div>

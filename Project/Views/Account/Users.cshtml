@@ -1,0 +1,46 @@
+﻿@model List<Project.Models.User>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+<div class="container mt-5">
+
+    <h2>User List</h2>
+
+    <table class="table table-bordered">
+        <tr>
+            <th>Sr No</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Created Date</th>
+            <th>Action</th>
+        </tr>
+
+        @{
+            int i = 1;
+        }
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@i</td>
+                <td>@item.Name</td>
+                <td>@item.Username</td>
+                <td>@item.CreatedDate</td>
+                <td>
+                    @if (item.IsActive)
+                    {
+                        <a href="/Account/ToggleUser?id=@item.Id" class="btn btn-danger">Disable</a>
+                    }
+                    else
+                    {
+                        <a href="/Account/ToggleUser?id=@item.Id" class="btn btn-success">Enable</a>
+                    }
+                </td>
+            </tr>
+
+            i++;
+        }
+
+    </table>
+
+</div>
